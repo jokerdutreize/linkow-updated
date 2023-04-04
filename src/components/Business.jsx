@@ -19,16 +19,15 @@ const FeatureCard = ({ icon, title, content, index }) => (
 );
 
 const Business = () =>  (
-  <section id="features" className={layout.section}>
+  <section id="how-it-works" className={layout.section}>
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        You do the business, <br className="sm:block hidden" /> we’ll handle
-        the money.
+        Comment ça <br className="sm:block hidden" /> marche ?
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds
-        of credit cards on the market.
+        La carte Linkow utilise la technologie NFC pour
+        permettre aux utilisateurs de transférer des informations 
+        en plaçant simplement leur téléphone à proximité de la carte. 
       </p>
 
       <Button styles={`mt-10`} />

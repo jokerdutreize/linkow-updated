@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-import { close, logo, menu } from "../assets";
+import { close, logonew, menu } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("Accueil");
   const [toggle, setToggle] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
+      <img src={logonew} alt="hoobank" className="w-[174px] h-[82px]" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
@@ -20,7 +20,7 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <a href={`${nav.link ? nav.link : "#"+nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
